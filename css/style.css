@@ -244,3 +244,53 @@ footer {
   color: #4a4a4a;
   margin-top: auto;
 }
+/* --- Media Queries untuk Desain Responsif --- */
+
+/* Untuk layar dengan lebar maksimum 768px (Tablet dan Smartphone) */
+@media (max-width: 768px) {
+  /* Atur ulang header agar navigasi berada di bawah judul */
+  header {
+    flex-direction: column; /* Mengubah arah flex menjadi kolom */
+    position: static; /* Hapus posisi fixed agar tidak menimpa konten */
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  header h1 {
+    margin-bottom: 1rem; /* Beri jarak antara judul dan navigasi */
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column; /* Tampilkan link navigasi secara vertikal */
+    align-items: center;  /* Pusatkan item navigasi */
+    width: 100%;
+  }
+
+  nav a {
+    margin: 0.5rem 0; /* Atur jarak vertikal antar link */
+    padding: 0.5rem;
+  }
+
+  /* Atur ulang padding agar konten utama tidak terpotong */
+  main {
+    padding-top: 20px;
+  }
+  /* Sesuaikan ukuran font pada hero banner untuk layar kecil */
+  .hero-content h2 {
+    font-size: 2.5rem; /* Perkecil ukuran font judul utama */
+  }
+
+  .hero-content .promo-text {
+    font-size: 1rem;
+  }
+
+  .hero-image-banner {
+    height: 60vh; /* Kurangi tinggi banner agar tidak terlalu dominan */
+  }
+  /* Ubah tata letak container kontak menjadi vertikal */
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
